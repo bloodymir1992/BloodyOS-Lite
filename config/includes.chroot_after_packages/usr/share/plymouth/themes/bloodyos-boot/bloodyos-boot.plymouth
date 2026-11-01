@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=BloodyOS Boot
+Description=BloodyOS boot screen with red animated bar
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/bloodyos-boot
+ScriptFile=/usr/share/plymouth/themes/bloodyos-boot/bloodyos-boot.script

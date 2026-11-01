@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=BloodyDisk Lite
+Exec=python3 /opt/bloodyos/apps/bloodydisk/bloodydisk.py
+Icon=/opt/bloodyos/apps/bloodydisk/bloodydisk.svg
+Terminal=false
+Categories=Utility;
+StartupNotify=true

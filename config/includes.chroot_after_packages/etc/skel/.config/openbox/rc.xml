@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:openbox_config xmlns:ns0="http://openbox.org/3.4/rc">
+  <ns0:theme>
+    <ns0:name>BloodyOS-Ob</ns0:name>
+    <ns0:titleLayout>NLIMC</ns0:titleLayout>
+  </ns0:theme>
+  <ns0:desktops>
+    <ns0:number>4</ns0:number>
+  </ns0:desktops>
+  <ns0:keyboard>
+    <ns0:keybind key="Super_L">
+      <ns0:action name="Execute">
+        <ns0:command>xfce4-popup-whiskermenu</ns0:command>
+      </ns0:action>
+    </ns0:keybind>
+    <ns0:keybind key="W-Return">
+      <ns0:action name="Execute">
+        <ns0:command>xfce4-terminal</ns0:command>
+      </ns0:action>
+    </ns0:keybind>
+    <ns0:keybind key="W-e">
+      <ns0:action name="Execute">
+        <ns0:command>thunar</ns0:command>
+      </ns0:action>
+    </ns0:keybind>
+    <ns0:keybind key="A-F4">
+      <ns0:action name="Close" />
+    </ns0:keybind>
+  
+    <ns0:keybind key="C-A-l">
+      <ns0:action name="Execute">
+        <ns0:command>dm-tool lock</ns0:command>
+      </ns0:action>
+    </ns0:keybind>
+  
+    <ns0:keybind key="C-A-t">
+      <ns0:action name="Execute">
+        <ns0:command>xfce4-terminal</ns0:command>
+      </ns0:action>
+    </ns0:keybind>
+      <ns0:keybind key="W-d"><ns0:action name="ToggleShowDesktop" /></ns0:keybind>
+    <ns0:keybind key="C-A-d"><ns0:action name="ToggleShowDesktop" /></ns0:keybind>
+    <ns0:keybind key="A-Tab"><ns0:action name="NextWindow" /></ns0:keybind>
+    <ns0:keybind key="A-S-Tab"><ns0:action name="PreviousWindow" /></ns0:keybind>
+    <ns0:keybind key="C-A-Left"><ns0:action name="GoToDesktop"><ns0:to>left</ns0:to><ns0:wrap>no</ns0:wrap></ns0:action></ns0:keybind>
+    <ns0:keybind key="C-A-Right"><ns0:action name="GoToDesktop"><ns0:to>right</ns0:to><ns0:wrap>no</ns0:wrap></ns0:action></ns0:keybind>
+  </ns0:keyboard>
+  <ns0:mouse>
+    <ns0:context name="Root">
+      <ns0:mousebind button="Right" action="Press">
+        <ns0:action name="ShowMenu">
+          <ns0:menu>root-menu</ns0:menu>
+        </ns0:action>
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Close">
+      <ns0:mousebind button="Left" action="Click">
+        <ns0:action name="Close" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Maximize">
+      <ns0:mousebind button="Left" action="Click">
+        <ns0:action name="ToggleMaximize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Iconify">
+      <ns0:mousebind button="Left" action="Click">
+        <ns0:action name="Iconify" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Titlebar">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Move" />
+      </ns0:mousebind>
+      <ns0:mousebind button="Left" action="DoubleClick">
+        <ns0:action name="ToggleMaximize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Client">
+      <ns0:mousebind button="A-Left" action="Drag">
+        <ns0:action name="Move" />
+      </ns0:mousebind>
+      <ns0:mousebind button="A-Right" action="Drag">
+        <ns0:action name="Resize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Title">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Move" />
+      </ns0:mousebind>
+      <ns0:mousebind button="Left" action="DoubleClick">
+        <ns0:action name="ToggleMaximize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="BLCorner">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Resize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="BRCorner">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Resize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="TLCorner">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Resize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="TRCorner">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Resize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Left">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Resize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Right">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Resize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Bottom">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Resize" />
+      </ns0:mousebind>
+    </ns0:context>
+    <ns0:context name="Top">
+      <ns0:mousebind button="Left" action="Drag">
+        <ns0:action name="Resize" />
+      </ns0:mousebind>
+    </ns0:context>
+  </ns0:mouse>
+</ns0:openbox_config>

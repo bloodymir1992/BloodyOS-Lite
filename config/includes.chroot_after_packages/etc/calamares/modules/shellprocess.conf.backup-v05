@@ -1,0 +1,4 @@
+---
+dontChroot: false
+script:
+  - "sed -i -E '/^[[:space:]]*autologin-user(-timeout)?[[:space:]]*=/d' /etc/lightdm/lightdm.conf"

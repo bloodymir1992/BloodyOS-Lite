@@ -1,0 +1,12 @@
+[Icon Theme]
+Name=BloodyOS WiFi
+Comment=Iconos WiFi Mint-Y con resto Tango
+Inherits=BloodyOS-Red,hicolor
+Directories=status/48
+
+[status/48]
+Size=48
+Type=Scalable
+MinSize=16
+MaxSize=64
+Context=Status

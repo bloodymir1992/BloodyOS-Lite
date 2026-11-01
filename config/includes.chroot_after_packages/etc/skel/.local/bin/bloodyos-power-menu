@@ -1,0 +1,31 @@
+#!/bin/bash
+
+export GTK_THEME=Adwaita:dark
+
+yad \
+  --title="BloodyOS Lite | Energía" \
+  --center \
+  --fixed \
+  --width=430 \
+  --height=155 \
+  --borders=18 \
+  --text="<span foreground='#e53935' size='large'><b>BLOODYOS LITE</b></span>" \
+  --text-align=center \
+  --buttons-layout=center \
+  --button="Apagar!system-shutdown:10" \
+  --button="Reiniciar!system-reboot:20" \
+  --button="Suspender!system-suspend:30"
+
+RESULT=$?
+
+case "$RESULT" in
+    10)
+        "$HOME/.local/bin/bloodyos-power" shutdown
+        ;;
+    20)
+        "$HOME/.local/bin/bloodyos-power" reboot
+        ;;
+    30)
+        "$HOME/.local/bin/bloodyos-power" suspend
+        ;;
+esac

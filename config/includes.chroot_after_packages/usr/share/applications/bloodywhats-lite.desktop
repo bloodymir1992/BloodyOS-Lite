@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=BloodyWhats Lite
+Exec=python3 /opt/bloodyos/apps/bloodywhats/bloodywhats.py
+Icon=/opt/bloodyos/apps/bloodywhats/bloodywhats-cat-yellow.png
+Terminal=false
+Categories=Network;Chat;
+StartupNotify=true

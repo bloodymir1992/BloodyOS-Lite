@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install BloodyOS Lite
+Name[es]=Instalar BloodyOS Lite
+GenericName=System Installer
+Comment=Install BloodyOS Lite on your computer
+Comment[es]=Instala BloodyOS Lite en tu computadora
+Exec=/usr/local/bin/bloodyos-installer
+Icon=install-debian
+Terminal=false
+Categories=System;
+StartupNotify=true

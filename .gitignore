@@ -1,0 +1,21 @@
+*.iso
+*.img
+*.log
+*.qcow2
+*.vdi
+*.vmdk
+chroot/
+binary/
+cache/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.sqlite
+*.sqlite3
+*.db
+
+# Precompiled binaries
+/config/includes.chroot_after_packages/usr/local/bin/ncspot
+/config/includes.chroot_after_packages/opt/bloodyos/apps/bloodymusic/ncspot
+/config/includes.chroot_after_packages/opt/bloodyos/apps/bloodywhats/bloodywhats-engine

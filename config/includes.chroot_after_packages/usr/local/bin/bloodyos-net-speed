@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+import pathlib
+import subprocess
+import sys
+import time
+
+direction = sys.argv[1] if len(sys.argv) > 1 else "rx"
+direction = "tx" if direction == "tx" else "rx"
+
+try:
+    result = subprocess.run(
+        ["ip", "-o", "-4", "route", "show", "default"],
+        capture_output=True, text=True, timeout=2
+    )
+    words = result.stdout.split()
+    iface = words[words.index("dev") + 1]
+    counter = pathlib.Path(
+        f"/sys/class/net/{iface}/statistics/{direction}_bytes"
+    )
+
+    first = int(counter.read_text())
+    start = time.monotonic()
+    time.sleep(1)
+    second = int(counter.read_text())
+    elapsed = time.monotonic() - start
+
+    speed = max(0, second - first) / elapsed / 1024
+    print(f"{speed:.1f} KB/s")
+except (Exception):
+    print("N/D")

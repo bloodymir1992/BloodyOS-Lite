@@ -1,0 +1,39 @@
+#!/bin/bash
+
+ACTION="${1:-}"
+
+case "$ACTION" in
+    shutdown)
+        MESSAGE="¿Apagar BloodyOS Lite?"
+        COMMAND=(systemctl poweroff)
+        ;;
+    reboot)
+        MESSAGE="¿Reiniciar BloodyOS Lite?"
+        COMMAND=(systemctl reboot)
+        ;;
+    suspend)
+        MESSAGE="¿Suspender la computadora?"
+        COMMAND=(systemctl suspend)
+        ;;
+    logout)
+        MESSAGE="¿Cerrar la sesión?"
+        COMMAND=(openbox --exit)
+        ;;
+    *)
+        echo "Uso: bloodyos-power {shutdown|reboot|suspend|logout}"
+        exit 1
+        ;;
+esac
+
+if command -v zenity >/dev/null 2>&1; then
+    zenity --question \
+        --title="BloodyOS Lite" \
+        --text="$MESSAGE" \
+        --ok-label="Confirmar" \
+        --cancel-label="Cancelar" || exit 0
+else
+    echo "Falta zenity; no se ejecutó ninguna acción."
+    exit 1
+fi
+
+"${COMMAND[@]}"

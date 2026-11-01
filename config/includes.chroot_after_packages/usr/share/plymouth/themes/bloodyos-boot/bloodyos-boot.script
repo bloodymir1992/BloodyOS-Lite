@@ -1,0 +1,42 @@
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+
+bg_image = Image("black.png").Scale(screen_width, screen_height);
+bg_sprite = Sprite(bg_image);
+bg_sprite.SetPosition(0, 0, -100);
+
+logo = Image("logo.png");
+logo_w = 180;
+logo_h = logo.GetHeight() * logo_w / logo.GetWidth();
+logo = logo.Scale(logo_w, logo_h);
+
+logo_sprite = Sprite(logo);
+logo_sprite.SetPosition((screen_width - logo_w) / 2, (screen_height - logo_h) / 2 - 40, 10);
+
+track_w = screen_width * 0.60;
+track_h = 6;
+track_x = (screen_width - track_w) / 2;
+track_y = screen_height - 42;
+
+track = Image("track.png").Scale(track_w, track_h);
+track_sprite = Sprite(track);
+track_sprite.SetPosition(track_x, track_y, 10);
+
+bar_w = track_w * 0.18;
+bar = Image("red.png").Scale(bar_w, track_h);
+bar_sprite = Sprite(bar);
+bar_sprite.SetPosition(track_x, track_y, 11);
+
+pos = 0;
+
+fun refresh_callback ()
+{
+    pos = pos + 4;
+
+    if (pos > (track_w - bar_w))
+        pos = 0;
+
+    bar_sprite.SetX(track_x + pos);
+}
+
+Plymouth.SetRefreshFunction(refresh_callback);

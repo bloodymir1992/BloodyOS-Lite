@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=BloodyTube
+Exec=python3 /opt/bloodyos/apps/bloodytube/bloodytube.py
+Icon=video-display
+Terminal=false
+Categories=AudioVideo;Video;
+StartupNotify=true

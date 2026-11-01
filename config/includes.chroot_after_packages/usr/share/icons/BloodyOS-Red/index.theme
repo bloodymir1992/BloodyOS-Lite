@@ -1,0 +1,12 @@
+[Icon Theme]
+Name=BloodyOS Red
+Comment=BloodyOS Lite red folders
+Inherits=Adwaita,hicolor
+Directories=scalable/places
+
+[scalable/places]
+Size=48
+Type=Scalable
+MinSize=16
+MaxSize=256
+Context=Places

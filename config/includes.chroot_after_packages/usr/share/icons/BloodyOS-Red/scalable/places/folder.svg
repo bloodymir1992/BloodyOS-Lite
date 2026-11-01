@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+ width="64" height="64" viewBox="0 0 64 64">
+ <path d="M5 15 Q5 11 10 11 H24 L30 17 H54
+ Q59 17 59 22 V49 Q59 54 54 54 H10 Q5 54 5 49Z"
+ fill="#711222"/>
+ <path d="M5 25 Q5 22 10 22 H54 Q60 22 59 28
+ L56 51 Q55 55 50 55 H10 Q5 55 5 50Z"
+ fill="#d32843"/>
+ <path d="M11 28 H52" stroke="#ff6072"
+ stroke-width="2" opacity=".7"/>
+</svg>

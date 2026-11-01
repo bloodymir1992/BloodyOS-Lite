@@ -1,0 +1,19 @@
+#!/bin/sh
+xsetroot -cursor_name left_ptr
+[ -f "$HOME/.fehbg" ] && sh "$HOME/.fehbg" &
+# BloodyOS: restaura el ultimo wallpaper seleccionado desde Thunar.
+nm-applet &
+conky -c "$HOME/.config/conky/bloodyos.conf" &
+
+# BloodyOS — Mantener pantalla activa
+xset s off
+xset -dpms
+xset s noblank
+
+# BloodyOS Panel
+xfce4-panel &
+xfsettingsd &
+xfce4-power-manager &
+
+# BloodyOS - Autenticación gráfica
+lxpolkit &

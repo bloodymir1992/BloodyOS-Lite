@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+  <menu id="root-menu" label="BloodyOS Desktop">
+
+    <item label="Cambiar fondo de pantalla">
+      <action name="Execute">
+        <command>thunar ~/Pictures</command>
+      </action>
+    </item>
+
+    <separator/>
+
+    <item label="Configuración de pantallas">
+      <action name="Execute">
+        <command>xfce4-display-settings</command>
+      </action>
+    </item>
+
+    <item label="Apariencia e iconos">
+      <action name="Execute">
+        <command>xfce4-appearance-settings</command>
+      </action>
+    </item>
+
+    <item label="Personalizar paneles">
+      <action name="Execute">
+        <command>xfce4-panel --preferences</command>
+      </action>
+    </item>
+
+    <separator/>
+
+    <item label="Administrador de archivos">
+      <action name="Execute">
+        <command>thunar</command>
+      </action>
+    </item>
+
+    <item label="Configuración del sistema">
+      <action name="Execute">
+        <command>xfce4-settings-manager</command>
+      </action>
+    </item>
+
+  </menu>
+</openbox_menu>

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=BloodyCat Update Manager
+Comment=Administrar actualizaciones del sistema
+Exec=/usr/local/bin/bloodycat-update-manager
+Icon=system-software-update
+Terminal=false
+Categories=System;

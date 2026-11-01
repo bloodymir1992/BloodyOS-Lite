@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=BloodyMusic
+Exec=python3 /opt/bloodyos/apps/bloodymusic/bloodymusic.py
+Icon=multimedia-player
+Terminal=false
+Categories=AudioVideo;Audio;
+StartupNotify=true

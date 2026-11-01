@@ -1,0 +1,30 @@
+@define-color window_bg_color #101014;
+@define-color window_fg_color #eeeeee;
+@define-color view_bg_color #17171c;
+@define-color view_fg_color #ffffff;
+@define-color accent_bg_color #9b1724;
+@define-color accent_fg_color #ffffff;
+@define-color headerbar_bg_color #101014;
+@define-color headerbar_fg_color #ffffff;
+@define-color card_bg_color #1d1d24;
+
+window {
+    background-color: #101014;
+    color: #eeeeee;
+}
+
+button {
+    background: #25252d;
+    color: #ffffff;
+    border: 1px solid #66202a;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #9b1724;
+}
+
+button.suggested-action {
+    background: #9b1724;
+    color: white;
+}

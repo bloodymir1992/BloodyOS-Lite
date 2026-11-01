@@ -1,0 +1,69 @@
+#!/bin/bash
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export DISPLAY="${DISPLAY:-:0}"
+
+run_update() {
+    local action="$1"
+
+    x-terminal-emulator -e bash -c '
+        echo "===================================="
+        echo "    BLOODYCAT UPDATE MANAGER"
+        echo "===================================="
+        echo
+
+        if [ "$1" = "refresh" ]; then
+            pkexec /usr/bin/apt-get update
+        else
+            pkexec /usr/bin/apt-get upgrade -y
+        fi
+
+        result=$?
+        echo
+        if [ "$result" -eq 0 ]; then
+            echo "Operation completed successfully."
+        else
+            echo "Operation failed. Exit code: $result"
+        fi
+
+        echo
+        read -r -p "Press Enter to close..."
+    ' bash "$action"
+}
+
+while true; do
+    updates=$(apt list --upgradable 2>/dev/null | tail -n +2)
+
+    if [ -z "$updates" ]; then
+        count=0
+        updates="Your system is up to date."
+    else
+        count=$(printf '%s\n' "$updates" | wc -l)
+    fi
+
+    tmp=$(mktemp)
+    printf '%s\n' "$updates" > "$tmp"
+
+    yad --text-info \
+        --title="BloodyCat Update Manager v0.1" \
+        --width=700 \
+        --height=470 \
+        --center \
+        --filename="$tmp" \
+        --fontname="Monospace 10" \
+        --text="BloodyOS Lite - BloodyCat Edition
+Available package updates: $count" \
+        --button="Close:0" \
+        --button="Check Updates:2" \
+        --button="Install Updates:3"
+
+    choice=$?
+    rm -f "$tmp"
+
+    case "$choice" in
+        2) run_update refresh ;;
+        3) run_update install ;;
+        *) break ;;
+    esac
+done

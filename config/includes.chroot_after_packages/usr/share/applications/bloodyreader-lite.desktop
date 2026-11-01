@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=BloodyReader Lite
+Exec=python3 /opt/bloodyos/apps/bloodyreader/bloodyreader.py
+Icon=/opt/bloodyos/apps/bloodyreader/books-symbolic.svg
+Terminal=false
+Categories=Office;Viewer;
+StartupNotify=true
